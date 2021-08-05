@@ -43,7 +43,7 @@ Please find it in [campaign_runner.py](campaign_runner.py).
 Messaging and Campaign Runner need to perform scheduled tasks.
 To start off we can go with cron jobs running every 5 minutes that correspondigly fetches new messages to be sent / campaigns to be run and executes them.   
 Alternatively we can use scheduling framework similar to Agenda.js or Quartz (I used them in previous projects).   
-Or we can even communicate sending messages using dedicated RabbitMQ queue with 0dealyed message exchange extension](https://github.com/rabbitmq/rabbitmq-delayed-message-exchange/) for scheduling 
+Or we can even communicate sending messages using dedicated RabbitMQ queue with [delayed message exchange extension](https://github.com/rabbitmq/rabbitmq-delayed-message-exchange/) for scheduling 
 
 ## Coding
 
