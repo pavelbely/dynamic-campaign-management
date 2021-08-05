@@ -74,7 +74,7 @@
         startedAt: date('2020-01-01'),
     },
     allPositions: [
-        { # We're duplicating this so as to simplify MongoDB queries when finding past or current positions
+        { # We're duplicating this so as to simplify MongoDB queries when finding among all person's experience
             name: 'Software Engineer',
             company: 'googleCompanyId',
             startedAt: date('2020-01-01'),

@@ -9,8 +9,8 @@ This is an example of microservice ready Dynamic Campaign management system that
 
 - Http Webhook Server (Flask/Django/express.js) that listens for webhooks from client on user events
     
-- Event queue (RabbitMQ)
-- DB (MongoDB/DynamoDB)
+- Event queue (RabbitMQ - de-facto standard in the industry)
+- DB (MongoDB/DynamoDB - As we have flexible schema and not much need for joins between documents)
 - Event handler - a worker that listens for events from queue and processes them
     - Messaging service - module responsible for sending messages and calls.start off we can use SendGrid or other SaaS and migrate to in house SMTP server when ready
     - Campaign runner - module responsible for running campaigns

@@ -32,38 +32,34 @@
         }
     ],
     "steps": [
-        {
-            "touchpoint": "1",
-            "percentage": 0.5,
-            "next": [
-                {
-                    "touchpoint": "2",
-                    "delay": "3d",
-                    "next": [
-                        {
-                            "touchpoint": "3",
-                            "delay": "3d"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "touchpoint": "3",
-            "percentage": 0.5,
-            "next": [
-                {
-                    "touchpoint": "2",
-                    "delay": "3d",
-                    "next": [
-                        {
-                            "touchpoint": "1",
-                            "delay": "3d"
-                        }
-                    ]
-                }
-            ]
-        }
+        [
+            {
+                "touchpoint": "1",
+                "percentage": 0.5
+            },
+            {
+                "touchpoint": "2",
+                "delay": "3d"
+            },
+            {
+                "touchpoint": "3",
+                "delay": "3d"
+            }
+        ],
+        [
+            {
+                "touchpoint": "3",
+                "percentage": 0.5
+            },
+            {
+                "touchpoint": "2",
+                "delay": "3d"
+            },
+            {
+                "touchpoint": "1",
+                "delay": "3d"
+            }
+        ]
     ],
     "actions": [
         { "account_id" : "*", "campaign_id" : "A", "touchpoint": "2", "event_type" : "approve", "action" : "send_touchpoint_5", "delay": "1h"},

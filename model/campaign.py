@@ -63,12 +63,13 @@
         ],
     ],
     "actions": [
-        { "account" : "*", "touchpoint": "2", "event_type" : "approve", "action" : "send_touchpoint_5", "delay": "1h"},
-        { "account" : "*", "touchpoint": "3", "event_type" : "click", "action" : "send_thanks_gift_card"},
-        { "account" : "*", "touchpoint": "1", "event_type" : "click", "action" : "send_touchpoint_4", "delay": "1d"},
-        { "account" : "*", "touchpoint": "1", "event_type" : "doc_read", "rule": "duration()>60s", "action" : "email_alert", "contacts" : ["sdr@b.com"]},
-        { "account" : "*", "event_type" : "reply", "action" : "email_alert", "contacts" : ["sdr@b.com"], "stop": true},
-        { "account" : "*", "event_type" : ["open", "click"], "rule": "count()>3", "action" : "email_alert", "contacts" : ["sdr@b.com"]}
+        # account_id = '*' means the rule to be applied to any account
+        { "account_id" : "*", "touchpoint": "2", "event_type" : "approve", "action" : "send_touchpoint_5", "delay": "1h"},
+        { "account_id" : "*", "touchpoint": "3", "event_type" : "click", "action" : "send_thanks_gift_card"},
+        { "account_id" : "*", "touchpoint": "1", "event_type" : "click", "action" : "send_touchpoint_4", "delay": "1d"},
+        { "account_id" : "*", "touchpoint": "1", "event_type" : "doc_read", "rule": "duration()>60s", "action" : "email_alert", "contacts" : ["sdr@b.com"]},
+        { "account_id" : "*", "event_type" : "reply", "action" : "email_alert", "contacts" : ["sdr@b.com"], "stop": true},
+        { "account_id" : "*", "event_type" : ["open", "click"], "rule": "count()>3", "action" : "email_alert", "contacts" : ["sdr@b.com"]}
     ],
     "accounts": ["sergeyBrinId", "larryPageId", ...<other accounts ids>...],
     "schedule": {
