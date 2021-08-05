@@ -41,15 +41,15 @@ Please find it in [campaign_runner.py](campaign_runner.py).
 ### Scheduling
 
 Messaging and Campaign Runner need to perform scheduled tasks.
-To start off we can go with cron jobs running every 5 minutes that correspondigly fetches new messages to be sent / campaigns to be run and executes them.
-Alternatively we can use scheduling framework similar to Agenda.js or Quartz (I used them in previous projects).
-Or we can even communicate sending messages this using dedicated RabbitMQ queue with 0dealyed message exchange extension](https://github.com/rabbitmq/rabbitmq-delayed-message-exchange/) for scheduling 
+To start off we can go with cron jobs running every 5 minutes that correspondigly fetches new messages to be sent / campaigns to be run and executes them.   
+Alternatively we can use scheduling framework similar to Agenda.js or Quartz (I used them in previous projects).   
+Or we can even communicate sending messages using dedicated RabbitMQ queue with 0dealyed message exchange extension](https://github.com/rabbitmq/rabbitmq-delayed-message-exchange/) for scheduling 
 
 ## Coding
 
 ### General comments
 
-This architecture embraces Event Sourcing, that is we store events as is in db and hydrate the state on server starts.
+This architecture embraces Event Sourcing, that is we store events as is in db and hydrate the state on server starts.   
 The single source of truth for handling events and hydrating the state is [EventHandler](event_handler.py).
 
 ### Assumptions
